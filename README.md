@@ -41,5 +41,6 @@ Nuestro software cuenta con la licencia [MIT](https://es.wikipedia.org/wiki/Lice
 
 ## Autores ✒️
 
-* **Jonathan Adriano** - *Gestion de la base de datos* - [jonathan2405](https://github.com/jonathan2405)
+* **Jonathan Adriano** - *Documentacion* - [jonathan2405](https://github.com/jonathan2405)
+* **Ricardo Villegas** - *Documentacion* - [Ricardo-Javier-Villegas-Mendieta](https://github.com/Ricardo-Javier-Villegas-Mendieta)
 

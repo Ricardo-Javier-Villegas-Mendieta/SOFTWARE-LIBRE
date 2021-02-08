@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	 xmlns:p="http://primefaces.org/ui">
+<head>
+<title>Auditoria</title>
+<link rel="stylesheet" href="estilos/index.css" type="text/css" />
+<link rel="stylesheet" href="estilos/auditoria.css" type="text/css" />
+</head>
+<body>
+	<center>
+		<div class="cabeza">
+			<h1>Administrador</h1>
+			<ul id="button">
+				<li><a href="administrador.jsf">Inicio</a></li>
+				<li><a href="registrar.jsf">Registrar Usuarios</a></li>
+				<li><a href="usuarios.jsf">Usuarios</a></li>
+				<li><a href="auditoria.jsf">Auditoria</a></li>
+				<li><a href="iniciar_sesion.jsf">Cerrar Sesión</a></li>
+			</ul>
+		</div>
+		<br />
+<center>
+
+		<h1>Información de Auditoria</h1>
+
+		<br />
+		<p:dataTable id="auditoria" value="#{BeanAuditoria.listaAuditoria()}"
+			var="listarAuditoria" border="1">
+			<p:column>
+				<f:facet name="header">Tabla</f:facet>    				
+                                #{listarAuditoria.tabla_aud}
+                        </p:column>
+			<p:column>
+				<f:facet name="header">Operación</f:facet>    				
+                                #{listarAuditoria.operacion_aud}
+                        </p:column>
+			<p:column>
+				<f:facet name="header">Valor Anterior</f:facet>    				
+                                #{listarAuditoria.valoranterior_aud}
+                        </p:column>
+			<p:column>
+				<f:facet name="header">Valor Nuevo</f:facet>    				
+                                #{listarAuditoria.valornuevo_aud}
+                        </p:column>
+			<p:column>
+				<f:facet name="header">Fecha Auditoría</f:facet>    				
+                                #{listarAuditoria.fecha_aud}
+                        </p:column>
+			<p:column>
+				<f:facet name="header">Usuario</f:facet>    				
+                                #{listarAuditoria.usuario_aud}
+                        </p:column>
+			<p:column>
+				<f:facet name="header">Esquema</f:facet>    				
+                                #{listarAuditoria.esquema_aud}
+                        </p:column>
+
+		</p:dataTable>
+	</center>
+
+		<div class="footer">
+			©Todos los derechos reservados Jessica Borja, Jhon Granda, Jonathan Adriano   <br /> <a
+				href="https://github.com/JBorja96/Proyecto_UPS_P56">Para más
+				información</a>
+		</div>
+	</center>
+</body>
+</html>

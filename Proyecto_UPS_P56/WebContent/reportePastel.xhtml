@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Reporte_Pastel </title>
+	<link rel="stylesheet" href="estilos/admin.css" type="text/css" />
+</h:head>
+
+<h:body>
+<center>
+		<div class="cabeza">
+			<h1>Usuario</h1>
+			<ul id="button">
+				<li><a href="user.jsf">Inicio</a></li>
+				<li><a href="reportes.jsf">Ver Reportes</a></li>
+				<li><a href="iniciar_sesion.jsf">Cerrar Sesión</a></li>
+			</ul>
+		</div>
+	</center>
+	<center>
+		<h:panelGrid id="panel">
+			<p:chart type="pie" model="#{graficosControl.torta}"
+				style="width:1500px;height:600px;" />
+
+		</h:panelGrid>
+		
+		
+	<br />
+	<br />
+	<br />
+<a href="reportes.jsf">Regresar a Reportes</a>	
+</center>
+<br />
+<br />
+<br />
+<br />
+		<center>
+		<div id="pie" class="footer">
+			©Todos los derechos reservados Jessica Borja, Jhon Granda, Jonathan Adriano   <br /> <a
+				href="https://github.com/JBorja96/Proyecto_UPS_P56">Para más
+				información</a>
+		</div>
+	</center>
+</h:body>
+</html>

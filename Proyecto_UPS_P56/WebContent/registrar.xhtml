@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+<h:head>
+	<title>Iniciar Sesión</title>
+	<link rel="stylesheet" href="estilos/registrar.css" type="text/css" />
+</h:head>
+<h:body>
+	<center>
+		<div class="cabeza">
+			<h1>Administrador</h1>
+			<ul id="button">
+				<li><a href="administrador.jsf">Inicio</a></li>
+				<li><a href="registrar.jsf">Registrar Usuarios</a></li>
+				<li><a href="usuarios.jsf">Usuarios</a></li>
+				<li><a href="auditoria.jsf">Auditoria</a></li>
+				<li><a href="iniciar_sesion.jsf">Cerrar Sesión</a></li>
+			</ul>
+		</div>
+		<br />
+		<h:form>
+			<div class="login-box">
+
+				<h1>Registrar Usuario</h1>
+				<label for="username">Correo</label>
+				<h:inputText id="correo" value="#{beanRegistroPersona.correo}"
+					pt:placeholder="Ingrese el Correo" required="true" label="Correo">
+					<f:validateRegex pattern=".+[@].+[.].+" />
+				</h:inputText>
+				<h:message for="correo" style="color:red; font-family:Comic-Sans" />
+				<label for="password">Clave</label>
+				<h:inputSecret id="clave" value="#{beanRegistroPersona.clave}" pt:min="6" pt:max="10" 
+				pt:pattern="Contraseña mayor a 6 dígitos" 
+					pt:placeholder="Ingrese Clave" required="true" label="Clave">
+					<f:validateLength minimun="6" maximun="10"></f:validateLength></h:inputSecret>
+				<h:message for="clave" style="color:red; font-family:Comic-Sans" />
+				<label for="name">Nombre</label>
+				<h:inputText type="text" id="nombre"
+					value="#{beanRegistroPersona.nombre}"
+					pt:placeholder="Ingrese el Nombre" required="true" label="Nombre"></h:inputText>
+				<h:message for="nombre" style="color:red; font-family:Comic-Sans" />
+				<label for="lastname">Apellido</label>
+				<h:inputText id="apellido" value="#{beanRegistroPersona.apellido}"
+					pt:placeholder="Ingrese el Apellido" required="true" label="Apellido"></h:inputText>
+				<h:message for="apellido" style="color:red; font-family:Comic-Sans" />
+				<label for="cedula">Cédula</label>
+				<h:inputText a:type="number" id="cedula"
+					value="#{beanRegistroPersona.cedula}"
+					pt:placeholder="Ingrese la Cedula" required="true" label="Cedula"></h:inputText>
+				<h:message for="cedula" style="color:red; font-family:Comic-Sans" />
+				<br /> <br />
+				<h:commandButton value="Guardar"
+					action="#{beanRegistroPersona.almacenarPersona()}">
+				</h:commandButton>
+
+				<a href="index.jsf">Página Principal</a>
+			</div>
+		</h:form>
+		<div class="footer">
+			©Todos los derechos reservados Jessica Borja, Jhon Granda, Jonathan Adriano  <br /> <a
+				href="https://github.com/JBorja96/Proyecto_UPS_P56">Para más
+				información</a>
+		</div>
+	</center>
+</h:body>
+</html>

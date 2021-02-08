@@ -1,0 +1,173 @@
+@charset "ISO-8859-1";
+
+body {
+	padding: 0;
+	margin: 0;
+	background:linear-gradient(45deg, #4E077A, #1CDECF, #9E00FF);
+}
+
+.cabeza {
+	padding: 0;
+	margin: 0;
+	background: #472C83;
+	height: 100%;
+	font-family: "Constantia", serif;
+	font-size: 30px;
+	padding: 1px;
+	color: #fff;
+	text-align: center;
+}
+
+.centro {
+	margin-top: 15px;
+	padding: 20px;
+	width: 709px;
+	height: 400px;
+	background-color: rgba(0, 0, 255, 0.4);
+	text-align : justify;
+	border-radius: 3%;
+	padding: 20px;
+	text-align: justify;
+	font-size: 40px;
+}
+
+.centro_3 {
+	margin-top: 15px;
+	padding: 20px;
+	width: 1200px;
+	height: 520px;
+	background-color: rgba(0, 0, 255, 0.4);
+	text-align : justify;
+	border-radius: 3%;
+	padding: 20px;
+	text-align: justify;
+	font-size: 40px;
+}
+
+.centro2 {
+	margin-top: 15px;
+	padding: 20px;
+	width: 709px;
+	height: 400px;
+	background-color: rgba(0, 0, 255, 0.4);
+	text-align : justify;
+	border-radius: 3%;
+	padding: 20px;
+	text-align: center;
+	font-size: 40px;
+}
+
+.centro_4 {
+	margin-top: 15px;
+	padding: 20px;
+	width: 550px;
+	height: 250px;
+	background-color: rgba(0, 0, 255,.6);
+	text-align : justify;
+	border-radius: 3%;
+	padding: 20px;
+	text-align: center;
+	font-size: 40px;
+}
+
+.texto {
+	background-color: rgba(5, 39, 64, 0.4);
+	margin: 0;
+	padding: 20px;
+	border-radius: 3%;
+	color: #fff;
+	font-size: 25px;
+	display: block;
+}
+
+.textual {
+	background-color: rgba(5, 39, 64, 0.4);
+	margin: 0;
+	padding: 20px;
+	border-radius: 3%;
+	color: #fff;
+	font-size: 20px;
+	display: block;
+}
+
+.img {
+	display: table;
+
+}
+.centro h2 {
+	text-align: center;
+	color: #fff;
+}
+
+.footer {
+	width: 100%;
+	height: 40px;
+	font-family: Verdana;
+	font-size: 09pt;
+	background-color: #472C83;
+	text-align: center;
+	bottom: 0px;
+	padding-top: 5px;
+	box-shadow: rgba(0, 0, 0, .25) 0px 5px 15px;
+	line-height: 1em;
+	bottom: 0;
+	position: fixed;
+	box-shadow: rgba(0, 0, 0, .25) 0px 5px 15px;
+	z-index: 50;
+}
+
+.footer a {
+	color: #fff;
+}
+
+.imagen {
+	margin: 0;
+	padding: 10px;
+	background: #fff;
+	text-align: center;
+	border-radius: 5%;
+}
+
+#button {
+	height: 100%;
+	background: #E9E5DC;
+	padding: 15px;
+}
+
+#button li {
+	display: inline;
+}
+
+#button li a {
+	font-family: Arial;
+	font-size: 20px;
+	text-decoration: none;
+	padding: 10px;
+	background-color: #82747C;
+	color: #fff;
+	border-radius: 10%;
+}
+
+#button li a:hover {
+	background-color: #9245B7;
+	margin-top: -2;
+	padding-bottom: 12px;
+	border-radius: 10%;
+}
+
+.cabeza img{
+	border-radius: 5%;
+	
+}
+
+.centro_3 a {
+	
+	text-align: center;
+
+	}
+	
+.centro_3 img {
+	
+	text-align: center;
+
+	}

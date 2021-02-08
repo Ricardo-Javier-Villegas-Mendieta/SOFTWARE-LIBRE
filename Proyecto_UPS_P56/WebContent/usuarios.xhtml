@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<title>Usuarios</title>
+<link rel="stylesheet" href="estilos/index.css" type="text/css" />
+<link rel="stylesheet" href="estilos/usuarios.css" type="text/css" />
+</head>
+<body>
+	<center>
+		<div class="cabeza">
+			<h1>Administrador</h1>
+			<ul id="button">
+				<li><a href="administrador.jsf">Inicio</a></li>
+				<li><a href="registrar.jsf">Registrar Usuarios</a></li>
+				<li><a href="usuarios.jsf">Usuarios</a></li>
+				<li><a href="auditoria.jsf">Auditoria</a></li>
+				<li><a href="iniciar_sesion.jsf">Cerrar Sesión</a></li>
+			</ul>
+		</div>
+		<br />
+		<div class="ti">
+			<h1>Usuarios Registrados</h1>
+		</div>
+		<br />
+		<h:form>
+		<h:dataTable id="personas"
+			value="#{beanRegistroPersona.listaPersona()}" var="listarUsuarios"
+			border="1">
+			<h:column>
+				<f:facet name="header">Correo</f:facet>    				
+                                #{listarUsuarios.correo}
+                        </h:column>
+			<h:column>
+				<f:facet name="header">Clave</f:facet>    				
+                                #{listarUsuarios.clave}
+                        </h:column>
+			<h:column>
+				<f:facet name="header">Nombre</f:facet>    				
+                                #{listarUsuarios.nombre}
+                        </h:column>
+			<h:column>
+				<f:facet name="header">Apellido</f:facet>    				
+                                #{listarUsuarios.apellido}
+                        </h:column>
+			<h:column>
+				<f:facet name="header">Cédula</f:facet>    				
+                                #{listarUsuarios.cedula}
+                        </h:column>
+			<h:column>
+				<f:facet name="header">Perfil</f:facet>    				
+                                #{listarUsuarios.n_perfil}
+                        </h:column>
+                        <h:column>
+					<f:facet name="header">Editar</f:facet>
+					<h:commandButton action="#{beanRegistroPersona.go(listarUsuarios.cedula)}" value="Modificar" />
+					
+				<!-- <h:link value="Editar" outcome="editar_user" /> -->	
+				</h:column>
+				<h:column>
+					<f:facet name="header">Eliminar</f:facet>
+					<h:commandButton
+						actionListener="#{beanRegistroPersona.eliminacion(listarUsuarios.cedula)}"
+						value="Eliminar" />
+				</h:column>
+		</h:dataTable>
+		</h:form>
+		<br /> 
+	</center>
+	<div class="footer">
+			©Todos los derechos reservados Jessica Borja, Jhon Granda, Jonathan Adriano   <br /> <a
+				href="https://github.com/JBorja96/Proyecto_UPS_P56">Para más
+				información</a>
+		</div>
+	
+</body>
+</html>

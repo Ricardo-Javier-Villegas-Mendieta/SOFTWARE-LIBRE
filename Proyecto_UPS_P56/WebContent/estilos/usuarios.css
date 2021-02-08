@@ -1,0 +1,32 @@
+@charset "ISO-8859-1";
+table {
+    width:500px;
+    font:normal 35px Arial;
+    text-align:center;
+    border-collapse:collapse;
+    background-color:lightblue;
+}
+table th {
+	color:white;
+    font:bold 35px Arial;
+    background-color:#3F346A;
+}
+input[type="submit"] {
+	border: none;
+	outline: none;
+	height: 40px;
+	background: #927CE6;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 20px;
+}
+input[type="submit"]:hover {
+	cursor: pointer;
+	background: #5AD5DF;
+	color: #000;
+}
+.ti{
+	font-size:35px;
+	color:white;
+	background-color: rgba(0, 0, 255, 0.4);
+}

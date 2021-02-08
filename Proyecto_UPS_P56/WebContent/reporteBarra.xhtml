@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Barras </title>
+	<link rel="stylesheet" href="estilos/admin.css" type="text/css" />
+</h:head>
+
+<h:body>
+<center>
+		<div class="cabeza">
+			<h1>Usuario</h1>
+			<ul id="button">
+				<li><a href="user.jsf">Inicio</a></li>
+				<li><a href="reportes.jsf">Ver Reportes</a></li>
+				<li><a href="iniciar_sesion.jsf">Cerrar Sesión</a></li>
+			</ul>
+		</div>
+	</center>
+	<div align="center">
+
+		<h:form id="frmFiltro">
+			<p:panel header="Filtros de búsqueda">
+				<p:panelGrid>
+					<p:row>
+						<p:column>Seleccione Provicia:</p:column>
+						<p:column>
+							<p:selectOneMenu id="somProvincia" required="true"
+								value="#{graficosControl.codProvincia}">
+								<f:selectItems value="#{graficosControl.listaProvincia}" />
+							</p:selectOneMenu>
+							<p:message for="somProvincia" />
+						</p:column>
+					</p:row>
+					<p:row>
+						<p:column colspan="2">
+							<p:commandButton icon="ui-icon-search" title="Buscar"
+								value="Buscar" actionListener="#{graficosControl.buscarCron()}"
+								process="@form" update=":frmResultado,:frmFiltro" />
+						</p:column>
+					</p:row>
+				</p:panelGrid>
+			</p:panel>
+		</h:form>
+
+	</div>
+
+	<h:form id="frmResultado">
+		<p:panel header="Resultado">
+			<h:outputText value="#{graficosControl.resultado}" />
+			<p:dataTable rows="8" paginator="true" paginatorPosition="bottom"
+				value="#{graficosControl.reportecron}" var="rep">
+				<p:column headerText="Productos">
+					<h:outputText value="#{rep.datos}" />
+				</p:column>
+				<p:column headerText="Cantidad">
+					<h:outputText value="#{rep.contador}" />
+				</p:column>
+			</p:dataTable>
+
+			<div align="center">
+				<p:chart type="bar" model="#{graficosControl.barra}"
+					style="width:1200px;height:1200px"
+					rendered="#{graficosControl.barra != null}" />
+			</div>
+
+		</p:panel>
+
+	</h:form>
+	<br />
+	<center>
+	<br />
+	<br />
+	<br />
+<a href="reportes.jsf">Regresar a Reportes</a>	
+</center>
+<br />
+<br />
+<br />
+<br />
+		<center>
+		<div id="pie" class="footer">
+			©Todos los derechos reservados Jessica Borja, Jhon Granda, Jonathan Adriano   <br /> <a
+				href="https://github.com/JBorja96/Proyecto_UPS_P56">Para más
+				información</a>
+		</div>
+	</center>
+</h:body>
+</html>
